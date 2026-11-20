@@ -263,7 +263,7 @@ def draw_spiral(cv, cx, cy, max_r):
         y = int(cy + r * math.sin(a) * 0.92)
         col = BLUE if (deg // 180) % 2 == 0 else TEAL
         if prev is not None:
-            cv.line(prev[0], prev[1], x, y, col, thick=4)
+            cv.line(prev[0], prev[1], x, y, col, thick=5)
         prev = (x, y)
     cv.disc(cx, cy, 11, RED)
     cv.ring(cx, cy, 15, WHITE, thick=2)
@@ -338,6 +338,7 @@ def build():
     cv.frame(664, 202, 324, 268, INK, thick=1)
     draw_spiral(cv, 826, 322, 108)
     cv.text("ODISHA", 676, 212, 2, INK)
+    cv.text("LANDFALL BY NOON", 978, 212, 2, RED, align="right")
     cv.text("BAY OF BENGAL", 826, 448, 2, BLUE, align="center")
     cv.hline(36, 988, 482, INK, thick=2)
 
